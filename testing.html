@@ -6,7 +6,7 @@
 </head>
 <body>
     <script>
-        // -------- Create and insert CSS --------
+        // Create and insert CSS
         const style = document.createElement('style');
         style.textContent = `
             body {
@@ -67,11 +67,10 @@
         `;
         document.head.appendChild(style);
 
-        // -------- Create HTML structure using JS --------
+        // Create HTML structure using JS
         const container = document.createElement('div');
         container.className = 'container';
 
-        // Header
         const header = document.createElement('div');
         header.className = 'header';
 
@@ -86,11 +85,9 @@
         header.appendChild(button);
         container.appendChild(header);
 
-        // Main Section
         const main = document.createElement('div');
         main.className = 'main';
 
-        // Sidebar
         const sidebar = document.createElement('div');
         sidebar.className = 'sidebar';
         ['Home', 'Trending', 'Explore'].forEach(text => {
@@ -99,7 +96,6 @@
             sidebar.appendChild(item);
         });
 
-        // Content Area
         const content = document.createElement('div');
         content.className = 'content';
 
@@ -117,7 +113,6 @@
         content.appendChild(commentLabel);
         content.appendChild(commentBox);
 
-        // Combine and append
         main.appendChild(sidebar);
         main.appendChild(content);
         container.appendChild(main);
